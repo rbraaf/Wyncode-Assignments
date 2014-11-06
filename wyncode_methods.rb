@@ -7,7 +7,7 @@ into this Array
 [1, 2, 3, :a, :b, :c]"
 
 def flatten_method (arr = [1,2,3])
-    if arr.responds_to? :flatten
+    if arr.responds_to? flatten
         arr.flatten
     else
         puts "Invalid argument"
