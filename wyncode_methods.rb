@@ -7,7 +7,7 @@ into this Array
 [1, 2, 3, :a, :b, :c]"
 
 def flatten_method (arr = [1,2,3], arr2 = [4,5,6])
-    if arr.class == Array
+    if arr.to_a?
         arr.flatten
     else
         puts "Invalid argument"
@@ -36,7 +36,7 @@ END
 # puts "[1, 2, 3].join(“ ”).split"
 
 def split_join(arr=[1,2,3])
-    if arr.class == Array
+    if arr.to_a?
         p arr.join(" ").split
     else
         p "Invalid argument"
