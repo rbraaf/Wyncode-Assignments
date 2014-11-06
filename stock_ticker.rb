@@ -21,6 +21,6 @@ loop do
   puts "---------------------#{stock}-------------------------".upcase
   puts "=================================================="
   puts "$#{stock_price.content}"
-  puts "Yesterday's closing price was #{last_price.content}"
-  puts "Day's Range #{days_range_low.content} - #{days_range_hi.content}"
+  puts "Yesterday's closing price was $#{last_price.content}"
+  puts "Day's Range $#{days_range_low.content} - $#{days_range_hi.content}"
 end
