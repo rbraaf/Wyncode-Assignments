@@ -6,8 +6,8 @@ into this Array
 
 [1, 2, 3, :a, :b, :c]"
 
-def flatten_method (arr = [1,2,3], arr2 = [4,5,6])
-    if arr.to_a?
+def flatten_method (arr = [1,2,3])
+    if arr.responds_to? :flatten
         arr.flatten
     else
         puts "Invalid argument"
@@ -16,7 +16,7 @@ end
 
 
 def test_flatten
-    p flatten_method([1,2,3,5,6,7], [1,"s", "seven", 8])
+    #p flatten_method([1,2,3,5,6,7], [1,"s", "seven", 8])
     p flatten_method([[1,2,3,5,6,7], [1,"s", "seven", 8]])
 end
 
@@ -53,4 +53,4 @@ def test_split_join
 end
 
 
-test_split_join
+#test_split_join
