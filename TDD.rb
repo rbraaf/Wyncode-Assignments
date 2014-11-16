@@ -24,4 +24,4 @@ def test_add_two
     p add_two("cat")
 end
 
-test_add_two
+# test_add_two
