@@ -1,12 +1,21 @@
-<h1 id="headline">Mission: Possible</h1>
-<h4 id="subtitle">Mission Log</h4>
+<nav class="navbar navbar-defualt">
+  <div class="container">
+    <div class="navbar-header">
+      <a href=""></a><h1 id="headline">Mission: Possible</h1>
+      <h4 id="subtitle">Mission Log</h4>
+    </div>
+  </div>
+</nav>
 
-<table class="table table-striped">
+
+
+
+<table class="table table">
   <thead>
-    <tr>
+    <tr id="table_header">
       <th>Active Mission</th>
       <th>Mission Details</th>
-      <th>ETA</th>
+      <th>TTC</th>
       <th>Completed</th>
       <th>Edit</th>
       <th>Destroy</th>
@@ -15,14 +24,17 @@
 
   <tbody>
     <% @todo_items.each do |todo_item| %>
-      <tr>
+      <tr id="data">
         <td><%= todo_item.todo %></td>
         <td><%= todo_item.description %></td>
         <td><%= todo_item.due %></td>
-        <td><%= todo_item.completed %></td>
-        <!-- <td><%= link_to 'Show', todo_item %></td> -->
-        <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
-        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if todo_item.completed %>
+        <td class="icon"><%= link_to '', todo_item_path(todo_item, {todo_item:{completed: false}}), method: :put, class: "fa fa-check-square-o" %></td>
+        <% else %>
+        <td class="icon"><%= link_to '', todo_item_path(todo_item, {todo_item:{completed: true}}), method: :put, class: "fa fa-square-o" %></td>
+        <% end%>
+        <td class="icon"><%= link_to '', edit_todo_item_path(todo_item), class: "fa fa-pencil" %></td>
+        <td class="icon"><%= link_to '', todo_item, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-bomb" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +42,5 @@
 
 <br>
 
-<%= link_to 'New Mission', new_todo_item_path %>
+
+<div class="text-left"><button type="button" class="btn btn-sm btn-primary"><%= link_to 'New Mission', new_todo_item_path %></button></li></div>
