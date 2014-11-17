@@ -27,7 +27,11 @@
 }
 
 #data:hover {
-  background-color: #939185;
+  background-color: #4B8274;
+}
+
+.top_headers {
+  font-family: 'Russo One', sans-serif;
 }
 
 .navbar {
@@ -54,6 +58,10 @@
   background-color: #98A5AD;
 }
 
+.btn-primary:hover {
+  background-color: #4B8274;
+}
+
 th {
   padding-left: 50px;
   padding-right: 50px;
@@ -70,5 +78,5 @@ td {
 
 a:hover {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
