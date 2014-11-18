@@ -1,5 +1,17 @@
-<h1>New todo_item</h1>
+<nav class="navbar navbar-defualt">
+  <div class="container">
+    <div class="navbar-header">
+      <a href=""></a><h1 id="headline">Mission: Possible</h1>
+    </div>
+  </div>
+</nav>
 
-<%= render 'form' %>
+<div class="container">
 
-<%= link_to 'Back', todo_items_path %>
+<h1 id="new_headline">New Mission</h1>
+
+<div class="text-center"><%= render 'form' %></div>
+
+<div class="back_button"><%= link_to 'Back', todo_items_path %></div>
+
+</div>

@@ -30,6 +30,10 @@
   background-color: #4B8274;
 }
 
+#new_headline {
+  text-align: center;
+}
+
 .top_headers {
   font-family: 'Russo One', sans-serif;
 }
@@ -38,6 +42,7 @@
   width: 100%;
   background-color: #98A5AD;
   border-radius: 0px;
+  margin-bottom: 0px;
 }
 
 .create_button {
@@ -60,6 +65,18 @@
 
 .btn-primary:hover {
   background-color: #4B8274;
+}
+
+.back_button {
+  text-align: center;
+}
+
+.container {
+  background-color: #98A5AD;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
 }
 
 th {
