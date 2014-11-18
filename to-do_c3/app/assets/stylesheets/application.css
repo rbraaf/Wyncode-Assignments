@@ -30,11 +30,11 @@
   background-color: #4B8274;
 }
 
-#new_headline {
+#new_headline {     /* Headline on the "new" page */
   text-align: center;
 }
 
-.top_headers {
+.top_headers {      /* Table headers */
   font-family: 'Russo One', sans-serif;
 }
 
@@ -50,22 +50,12 @@
   text-align: right;
 }
 
-.container {
-  margin-left: 5px;
+.fa-plus-square {     /* This is the "new" button on the home page */
+  margin-left: 10px;
 }
 
-.text-right {
-  width: 100%;
-}
-
-.btn {
-  margin-left: 5px;
+.fa-plus-square:hover {
   background-color: #98A5AD;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #4B8274;
 }
 
 .back_button {
