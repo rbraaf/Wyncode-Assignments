@@ -61,6 +61,7 @@
 .btn {
   margin-left: 5px;
   background-color: #98A5AD;
+  border: none;
 }
 
 .btn-primary:hover {

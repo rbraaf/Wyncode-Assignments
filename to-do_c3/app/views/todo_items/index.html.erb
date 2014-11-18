@@ -7,9 +7,6 @@
   </div>
 </nav>
 
-
-
-
 <table class="table table">
   <thead>
     <tr id="table_header">
@@ -29,11 +26,11 @@
         <td><%= todo_item.description %></td>
         <td><%= todo_item.due %></td>
         <% if todo_item.completed %>
-        <td class="icon"><%= link_to '', todo_item_path(todo_item, {todo_item:{completed: false}}), method: :put, class: "fa fa-check-square-o fa-2x" %></td>
+        <td class="complete_icon"><%= link_to '', todo_item_path(todo_item, {todo_item:{completed: false}}), method: :put, class: "fa fa-check-square-o fa-2x" %></td>
         <% else %>
-        <td class="icon"><%= link_to '', todo_item_path(todo_item, {todo_item:{completed: true}}), method: :put, class: "fa fa-square-o fa-2x" %></td>
+        <td class="complete_icon"><%= link_to '', todo_item_path(todo_item, {todo_item:{completed: true}}), method: :put, class: "fa fa-square-o fa-2x" %></td>
         <% end%>
-        <td class="icon"><%= link_to '', edit_todo_item_path(todo_item), class: "fa fa-pencil fa-2x" %></td>
+        <td class="icon"><%= link_to '', edit_todo_item_path(todo_item), class: "fa fa-laptop fa-2x" %></td>
         <td class="icon"><%= link_to '', todo_item, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-bomb fa-2x" %></td>
       </tr>
     <% end %>
@@ -43,4 +40,4 @@
 <br>
 
 
-<div class="text-left"><button type="button" class="btn btn-sm btn-primary"><%= link_to 'New Mission', new_todo_item_path %></button></li></div>
+<div class="text-left"><button type="button" class="btn btn-sm btn-primary"><%= link_to '', new_todo_item_path, class: "fa fa-plus" %></button></li></div>

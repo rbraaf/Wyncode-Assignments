@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :todo %><br>
+    <%= f.label "Codename" %><br>
     <%= f.text_field :todo %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label "Mission Details" %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :due %><br>
+    <%= f.label "Completion Date" %><br>
     <%= f.date_select :due %>
   </div>
   <% unless current_page?(action: 'new') %>
