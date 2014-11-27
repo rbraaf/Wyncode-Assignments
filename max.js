@@ -7,3 +7,4 @@ var max = function(arg1, arg2){
     return "Invalid entry";
   };
 }
+

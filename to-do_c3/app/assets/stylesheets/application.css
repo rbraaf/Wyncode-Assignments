@@ -82,9 +82,16 @@ td {
   padding-right: 50px;
   padding-top: 10px;
   text-align: center;
+  width: 16.6%;
 }
 
 a:hover {
   text-decoration: none;
   color: #fff;
 }
+
+#todo_item_state {
+  width: 31px;
+  margin-bottom: 10px;
+}
+

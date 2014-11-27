@@ -11,18 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141117132455) do
+ActiveRecord::Schema.define(version: 20141126214556) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  create_table "lists", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "todo_items", force: true do |t|
     t.string   "todo"
     t.text     "description"
     t.date     "due"
-    t.boolean  "completed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "state",       default: 1
+    t.integer  "list_id"
   end
+
+  add_index "todo_items", ["list_id"], name: "index_todo_items_on_list_id"
 
 end

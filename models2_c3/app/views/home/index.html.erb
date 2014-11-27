@@ -3,3 +3,26 @@
   <%= user.name %>
 <% end %>
 <%# a ruby comment %>
+
+<%# debug @users %>  <!-- Used to debug variables -->
+
+<%= render @users %>
+
+<%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %> 
+<% end %>
+
+<%= form_tag '/search' do %>
+<!--   <%= text_field_tag :term %> -->
+  <%= search_field_tag :term %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
+<h3>Number formatters</h3>
+<% @value = 100 %>
+Percentage: <%= number_to_percentage @value, precision: 2 %><br>
+Phone: <%= number_to_phone @value %><br>
+Delimited: <%= number_with_delimiter @value %><br>
+Currency: <%= number_to_currency @value %>

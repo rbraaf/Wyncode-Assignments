@@ -1,4 +1,4 @@
-<%= form_for(@todo_item) do |f| %>
+<%= form_for([@list, @todo_item]) do |f| %>
   <% if @todo_item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@todo_item.errors.count, "error") %> prohibited this todo_item from being saved:</h2>
@@ -23,12 +23,11 @@
     <%= f.label "Completion Date" %><br>
     <%= f.date_select :due %>
   </div>
-  <% unless current_page?(action: 'new') %>
-    <div class="field">
-      <%= f.label :completed %><br>
-      <%= f.check_box :completed %>
-    </div>
-  <%end%>
+  <div>
+    <%=  f.label "State" %><br>
+    <%= f.number_field :state, in: 1..4 %>
+  </div>
+  <%= f.hidden_field :list_id, value: @list.id if @list %>
   <div class="actions">
     <%= f.submit %>
   </div>

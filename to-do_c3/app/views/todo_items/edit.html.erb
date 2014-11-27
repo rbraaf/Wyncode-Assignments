@@ -13,6 +13,6 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @todo_item %> |
-<%= link_to 'Back', todo_items_path %>
+<%= link_to 'Back', list_todo_items_path(@todo_item.list) %>
 
 </div>
