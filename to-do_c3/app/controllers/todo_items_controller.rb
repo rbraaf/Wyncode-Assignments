@@ -58,7 +58,7 @@ class TodoItemsController < ApplicationController
   def destroy
     @todo_item.destroy
     respond_to do |format|
-      format.html { redirect_to @list_todo_items_path, notice: 'Mission Self-Destructed.' }
+      format.html { redirect_to list_todo_items_path(@todo_item.list), notice: 'Mission Self-Destructed.' }
       format.json { head :no_content }
     end
   end
