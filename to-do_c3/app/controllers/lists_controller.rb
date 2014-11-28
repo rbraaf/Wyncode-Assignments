@@ -1,10 +1,11 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize
 
   # GET /lists
   # GET /lists.json
   def index
-    @lists = List.all
+    @lists = List.where(user_id: current_user.id)
   end
 
   # GET /lists/1
@@ -69,6 +70,6 @@ class ListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_params
-      params.require(:list).permit(:name, :description)
+      params.require(:list).permit(:name, :description, :user_id)
     end
 end

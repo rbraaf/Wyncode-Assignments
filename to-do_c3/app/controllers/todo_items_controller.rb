@@ -2,6 +2,7 @@
 class TodoItemsController < ApplicationController
   before_action :set_todo_item, only: [:show, :edit, :update, :destroy]
   before_action :set_list, only: [:index, :new, :create]
+  before_filter :authorize
 
   # GET /todo_items
   # GET /todo_items.json
