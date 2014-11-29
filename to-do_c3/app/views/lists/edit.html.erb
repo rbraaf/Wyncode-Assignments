@@ -1,6 +1,24 @@
-<h1>Editing list</h1>
+<div class="navbar-header">
+  <div class="logout_button">
+    <% if current_user %>
+          Signed in as <%= current_user.name %> | <%= link_to "Logout", sessions_destroy_path %>
+    <% else %>
+          <%= link_to 'Login', '/' %> | <%= link_to 'Signup', users_new_path %>
+    <% end %>
+    </div>
+  <h1 id="headline"><%= link_to "Mission: Possible", lists_path %></h1>
+</div>
 
-<%= render 'form' %>
+<br>
 
-<%= link_to 'Show', @list %> |
-<%= link_to 'Back', lists_path %>
+<div class="update_mission text-center">
+  <h1>Update Mission</h1>
+
+  <%= render 'form' %>
+
+</div>
+
+<div class="text-center">
+  <%= link_to '', @list, class:"fa fa-binoculars fa-2x" %> |
+  <%= link_to '', lists_path, class:"fa fa-caret-square-o-left fa-2x" %>
+</div>

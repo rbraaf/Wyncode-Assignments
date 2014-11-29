@@ -14,60 +14,46 @@
  *= require_self
  */
 
+
+/**********************************
+******** HEADER **************
+**********************************/
 #headline {
   text-align: left;
   font-family: 'Black Ops One', cursive;
   margin-top: 0px;
   text-decoration: underline;
+  color: #000;
+  font-size: 70px;
+}
+
+#headline a:hover {
+  background-color: transparent;
+}
+
+#headline a:visited {
+  color: #000;
 }
 
 #subtitle {
   text-align: left;
   font-family: 'Black Ops One', cursive;
+  color: #000;
+  font-size: 25px;
 }
 
-#data:hover {
-  background-color: #4B8274;
-}
 
-#new_headline {     /* Headline on the "new" page */
-  text-align: center;
-}
+/**********************************
+************ BODY **************
+**********************************/
+body {
+    background-color: #777E6D;
+  }
 
-.top_headers {      /* Table headers */
-  font-family: 'Russo One', sans-serif;
-}
-
-.navbar {
-  width: 100%;
-  background-color: #98A5AD;
-  border-radius: 0px;
-  margin-bottom: 0px;
-}
-
-.create_button {
-  float: right;
-  text-align: right;
-}
-
-.fa-plus-square {     /* This is the "new" button on the home page */
-  margin-left: 10px;
-}
-
-.fa-plus-square:hover {
-  background-color: #98A5AD;
-}
-
-.back_button {
-  text-align: center;
-}
-
-.container {
-  background-color: #98A5AD;
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
+.list {
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;
+    color: #000;
 }
 
 th {
@@ -85,13 +71,226 @@ td {
   width: 16.6%;
 }
 
+.list_text {
+  font-family: 'Russo One', sans-serif;
+  font-size: 20px;
+  color: #000;
+}
+
+.data:hover {
+  background-color: #4B8274;
+}
+
+.fa {
+  color: #000;
+}
+
+.fa:visited {
+  color: #transparent;
+}
+
+.table > thead > tr > th {
+  border-bottom: solid 2px black;
+}
+
+#new_headline {     /* Headline on the "new" page */
+  text-align: center;
+}
+
+.top_headers {      /* Table headers */
+  font-family: 'Russo One', sans-serif;
+}
+
+.create_button {
+  float: right;
+  text-align: right;
+}
+
+.fa-plus-square {     /* This is the "new" button on the home page */
+  margin-left: 10px;
+}
+
+.back_button {
+  text-align: center;
+}
+
 a:hover {
   text-decoration: none;
+  background-color: transparent;
   color: #fff;
 }
 
 #todo_item_state {
-  width: 105px;
+  width: 88px;
   margin-bottom: 10px;
 }
 
+
+
+
+
+/**********************************
+******** LOGIN PAGE *********
+**********************************/
+#login_headline {
+    font-family: 'Black Ops One', cursive;
+    font-size:  50px;
+    color: #000;
+}
+
+.login_box {
+  background-color: #4B543B;
+  padding-top: 80px;
+  height: 221px;
+}
+
+.email_input {
+  font-family: 'Russo One', sans-serif;
+  font-size: 17px;
+  margin: 0px auto;
+  display: inline;
+  padding-right: 10px;
+  color: #000;
+}
+
+.password_input {
+  margin: 5px auto;
+  font-family: 'Russo One', sans-serif;
+  font-size: 17px;
+  display: inline;
+  padding-right: 5px;
+  color: #000;
+}
+
+.signup_link {
+  font-family: 'Russo One', sans-serif;
+  padding-left: 1px;
+  padding-top: 7px;
+  font-size: 17px;
+  color: #000;
+}
+
+.signup_link a:visited {
+  color: #000;
+  }
+
+.signup_link a:hover {
+  color: #fff;
+  }
+
+  .diamond {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+
+/**********************************
+******** SIGNUP PAGE ********
+**********************************/
+#signup_headline {
+    font-family: 'Black Ops One', cursive;
+    font-size:  50px;
+    color: #000;
+}
+
+.signup_box {
+  background-color: #4B543B;
+  padding-top: 80px;
+  height: 221px;
+}
+
+.name_input {
+  margin: 5px auto;
+  font-family: 'Russo One', sans-serif;
+  font-size: 17px;
+  display: inline;
+  padding-right: 5px;
+  color: #000;
+}
+
+.login_link {
+  font-family: 'Russo One', sans-serif;
+  padding-left: 1px;
+  padding-top: 7px;
+  font-size: 17px;
+  color: #000;
+}
+
+.login_link a:visited {
+  color: #000;
+  }
+
+.login_link a:hover {
+  color: #fff;
+  }
+
+
+
+
+/**********************************
+******** LISTS PAGE ***********
+**********************************/
+.logout_button {
+  text-align: right;
+  font-family: 'Russo One', sans-serif;
+  font-size: 15px;
+  float: right;
+  padding-right: 5px;
+  color: #000;
+}
+
+.logout_button a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.logout_button a:visited {
+  color: #000;
+}
+
+.active_headline {
+  margin-top: 125px;
+  font-family: 'Russo One', sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+.navbar-header {
+  background-color: #4B543B;
+  width: 100%;
+  margin-top:  0px;
+}
+
+/**********************************
+****** EDIT TODO PAGE ******
+**********************************/
+.edit_container {
+    font-family: 'Russo One', sans-serif;
+    color: #000;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.update_headline {
+  margin-top: 100px;
+}
+
+/**********************************
+****** EDIT LIST PAGE ******
+**********************************/
+.update_mission {
+    font-family: 'Russo One', sans-serif;
+    color: #000;
+    font-size: 15px;
+    margin-top: 100px;
+}
+
+/**********************************
+****** NEW TODO PAGE ******
+**********************************/
+.new_container {
+    font-family: 'Russo One', sans-serif;
+    color: #000;
+    font-size: 15px;
+    margin-top: 100px;
+}

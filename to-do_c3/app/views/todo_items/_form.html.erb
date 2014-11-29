@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label "Operation:" %><br>
+    <%= f.label "Objective:" %><br>
     <%= f.text_field :todo %>
   </div>
   <div class="field">
-    <%= f.label "Mission Details" %><br>
+    <%= f.label "Objective Details:" %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label "Completion Date" %><br>
+    <%= f.label "Time To Completion:" %><br>
     <%= f.date_select :due %>
   </div>
   <div>
-    <%=  f.label "State" %><br>
-    <%= f.select :state, [["Backlog", 0], ["Ready", 1], ["In Progress", 2], ["Complete", 3]] %>
+    <%=  f.label "State:" %><br>
+    <%= f.select :state, [["Backlog", 1], ["Ready", 2], ["In Progress", 3], ["Complete", 4]] %>
   </div>
   <%= f.hidden_field :list_id, value: @list.id if @list %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit" %>
   </div>
 <% end %>

@@ -1,18 +1,25 @@
-<nav class="navbar navbar-defualt">
-  <div class="container">
-    <div class="navbar-header">
-      <a href=""></a><h1 id="headline">Mission: Possible</h1>
+<div class="navbar-header">
+  <div class="logout_button">
+    <% if current_user %>
+          Signed in as <%= current_user.name %> | <%= link_to "Logout", sessions_destroy_path %>
+    <% else %>
+          <%= link_to 'Login', '/' %> | <%= link_to 'Signup', users_new_path %>
+    <% end %>
     </div>
-  </div>
-</nav>
+  <h1 id="headline"><%= link_to "Mission: Possible", lists_path %></h1>
+</div>
 
-<div class="container">
+<br>
 
-<h1>Update Mission Parameters</h1>
+<div class="edit_container text-center">
+
+<h1 class="update_headline">Update Mission Objectives</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @todo_item %> |
-<%= link_to 'Back', list_todo_items_path(@todo_item.list) %>
+</div>
 
+<div class="text-center">
+<%= link_to '', @todo_item, class:"fa fa-binoculars fa-2x" %> |
+<%= link_to '', list_todo_items_path(@todo_item.list), class:"fa fa-caret-square-o-left fa-2x" %>
 </div>

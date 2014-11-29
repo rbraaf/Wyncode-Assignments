@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "Operation:" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label "Mission Details" %><br>
     <%= f.text_area :description %>
   </div>
   <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "New Mission" %>
   </div>
 <% end %>

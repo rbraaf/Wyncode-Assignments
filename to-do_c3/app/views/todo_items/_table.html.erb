@@ -1,25 +1,25 @@
-<table class="table table">
+<table class="list  table">
   <thead>
     <tr id="table_header">
-      <th class="top_headers">Operation:</th>
-      <th class="top_headers">Mission Details:</th>
+      <th class="top_headers">Objective:</th>
+      <th class="top_headers">Objective Details:</th>
       <th class="top_headers">TTC:</th>
       <th class="top_headers">Last Update:</th>
-      <th class="top_headers">Mission Status:</th>
-      <th class="top_headers">Mission Updates</th>
-      <th class="top_headers">Destroy</th>
+      <th class="top_headers">Status:</th>
+      <th class="top_headers">Updates</th>
+      <th class="top_headers">Abort</th>
     </tr>
   </thead>
 
   <tbody>
     <% todo_items.each do |todo_item| %>
-      <tr id="data">
-        <td><%= todo_item.todo %></td>
-        <td><%= todo_item.description %></td>
-        <td><%= todo_item.due %></td>
+      <tr class="data">
+        <td class="list_text"><%= todo_item.todo %></td>
+        <td class="list_text"><%= todo_item.description %></td>
+        <td class="list_text"><%= todo_item.due %></td>
         <% time_ago = todo_item.updated_at %>
-        <td><%= time_ago_in_words(time_ago) %> ago.</td>
-        <td> <%= todo_item.status %></td>
+        <td class="list_text"><%= time_ago_in_words(time_ago) %> ago.</td>
+        <td class="list_text"> <%= todo_item.status %></td>
         <td class="icon"><%= link_to '', edit_todo_item_path(todo_item), class: "fa fa-laptop fa-2x" %></td>
         <td class="icon"><%= link_to '', todo_item_path(todo_item), method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-bomb fa-2x" %></td>
       </tr>

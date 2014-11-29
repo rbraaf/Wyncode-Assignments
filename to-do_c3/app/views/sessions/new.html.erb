@@ -1,9 +1,21 @@
-<h1>Login</h1>
+  <div class="navbar-header">
+        <h1 id="headline"><%= link_to "Mission: Possible", lists_path %></h1>
+  </div>
+  <div class="login_box">  
+      <h1 id="login_headline">Login</h1>
+        
+        <%= form_tag '/login' do %>
+        <div class="email_input">Email: <%= text_field_tag :email %></div>
+        <div class="password_input">Password: <%= password_field_tag :password %></div>
+        <%= submit_tag "Submit" %>
 
-<%= form_tag '/login' do %>
+      <% end %>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+        <% if current_user %>
+          Signed in as <%= current_user.name %> | <%= link_to "Logout", sessions_destroy_path %>
+        <% else %>
+          <div class="signup_link"><%= link_to 'Enlist', users_new_path %></div>
+        <% end %>
 
-<% end %>
+        <div class="diamond"><%= image_tag ('Diamond_Dogs.png') %></div>
+  </div>

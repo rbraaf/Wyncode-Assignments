@@ -1,11 +1,15 @@
-<nav class="navbar navbar-defualt">
-  <div class="container">
-    <div class="navbar-header">
-      <h1 id="headline"><%= link_to "Mission: Possible", lists_path %></h1>
-      <h4 id="subtitle">Mission Log</h4>
+<div class="navbar-header">
+  <div class="logout_button">
+    <% if current_user %>
+          Signed in as <%= current_user.name %> | <%= link_to "Logout", sessions_destroy_path %>
+    <% else %>
+          <%= link_to 'Login', '/' %> | <%= link_to 'Signup', users_new_path %>
+    <% end %>
     </div>
-  </div>
-</nav>
+  <h1 id="headline"><%= link_to "Mission: Possible", lists_path %></h1>
+  <h4 id="subtitle">Current Objectives</h4>
+</div>
+
 
 <%=  render partial: 'table', locals: {todo_items: @todo_items.backlog} if @todo_items.backlog.any? %> 
 <%=  render partial: 'table', locals: {todo_items: @todo_items.ready}  if @todo_items.ready.any? %> 

@@ -1,11 +1,26 @@
-<h1>Signup!</h1>
-<p id="notice"><%= notice %></p>
-<%= form_for :user, url: '/users' do |f| %>
+<div class="navbar-header">
+  <h1 id="headline"><%= link_to "Mission: Possible", lists_path %></h1>
+</div>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
+<div class="signup_box">
+  <h1 id="signup_headline">Enlist</h1>
+  <p id="notice"><%= notice %></p>
+  <%= form_for :user, url: '/users' do |f| %>
+
+  <div class="name_input">Name: <%= f.text_field :name %></div>
+  <div class="email_input">Email: <%= f.text_field :email %></div>
+  <div class="password_input">Password: <%= f.password_field :password %></div>
+  <div class="password_input">Password Confirmation: <%= f.password_field :password_confirmation %></div>
   <%= f.submit "Submit" %>
 
-<% end %>
+  <% end %>
+
+  <% if current_user %>
+        Signed in as <%= current_user.name %> | <%= link_to "Logout", sessions_destroy_path %>
+  <% else %>
+        <div class="login_link"><%= link_to 'Login', '/' %></div>
+  <% end %>
+
+  <div class="diamond"><%= image_tag ('Diamond_Dogs.png') %></div>
+
+</div>
