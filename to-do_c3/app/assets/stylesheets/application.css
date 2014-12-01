@@ -27,12 +27,12 @@
   font-size: 70px;
 }
 
-#headline a:hover {
-  background-color: transparent;
-}
-
 #headline a:visited {
   color: #000;
+}
+
+#headline a:hover {
+  background-color: transparent;
 }
 
 #subtitle {
@@ -92,7 +92,7 @@ td {
 }
 
 .fa:visited {
-  color: #transparent;
+  color: transparent;
 }
 
 .table > thead > tr > th {
