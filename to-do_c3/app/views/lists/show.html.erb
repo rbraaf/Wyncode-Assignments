@@ -1,14 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="navbar-header">
+  <div class="logout_button">
+    <% if current_user %>
+          Signed in as <%= current_user.name %> | <%= link_to "Logout", sessions_destroy_path %>
+    <% else %>
+          <%= link_to 'Login', '/' %> | <%= link_to 'Signup', users_new_path %>
+    <% end %>
+        <div>
+      <%= image_tag 'RAF_roundel.png', class:"round" %>
+    </div>
+    </div>
+  <h1 id="headline"><%= link_to "Mission: Possible", lists_path %></h1>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @list.name %>
-</p>
+<br>
 
-<p>
-  <strong>Description:</strong>
-  <%= @list.description %>
-</p>
+<div class="show_text text-center">
 
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+  <p id="notice"><%= notice %></p>
+
+  <p class="show_box">
+    <strong>Name:</strong>
+    <%= @list.name %>
+  </p>
+
+  <p class="show_box">
+    <strong>Description:</strong>
+    <%= @list.description %>
+  </p>
+
+</div>
+
+<div class="text-center">
+  <%= link_to '', edit_list_path(@list), class:"fa fa-laptop fa-2x" %> |
+  <%= link_to '', lists_path, class:"fa fa-caret-square-o-left fa-2x" %>
+</div>

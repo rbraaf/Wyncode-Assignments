@@ -42,12 +42,18 @@
   font-size: 25px;
 }
 
+.round {
+  float: right;
+  height: 100px;
+  width: 100px;
+}
+
 
 /**********************************
 ************ BODY **************
 **********************************/
 body {
-    background-color: #777E6D;
+    background-color: #A4B8C4;
   }
 
 .list {
@@ -91,6 +97,10 @@ td {
 
 .table > thead > tr > th {
   border-bottom: solid 2px black;
+}
+
+.table > tbody > tr > td {
+  border-top: solid 2px black;
 }
 
 #new_headline {     /* Headline on the "new" page */
@@ -139,7 +149,7 @@ a:hover {
 }
 
 .login_box {
-  background-color: #4B543B;
+  background-color: #6C7A89;
   padding-top: 80px;
   height: 221px;
 }
@@ -194,7 +204,7 @@ a:hover {
 }
 
 .signup_box {
-  background-color: #4B543B;
+  background-color: #6C7A89;
   padding-top: 80px;
   height: 221px;
 }
@@ -256,10 +266,11 @@ a:hover {
 }
 
 .navbar-header {
-  background-color: #4B543B;
+  background-color: #6C7A89;
   width: 100%;
   margin-top:  0px;
 }
+
 
 /**********************************
 ****** EDIT TODO PAGE ******
@@ -294,3 +305,32 @@ a:hover {
     font-size: 15px;
     margin-top: 100px;
 }
+
+.new_objective {
+    font-family: 'Russo One', sans-serif;
+    color: #000;
+    font-size: 15px;
+    margin-top: 100px;
+}
+
+/**********************************
+****** SHOW PAGE ************
+**********************************/
+.show_box {
+    font-family: 'Russo One', sans-serif;
+    color: #000;
+    font-size: 30px;
+    padding-bottom: 12px;
+}
+
+.show_text {
+  margin-top: 100px;
+}
+
+.todo_show {
+  margin-top: 125px;
+}
+
+/**********************************
+***** TODO SHOW PAGE *****
+**********************************/

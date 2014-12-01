@@ -1,34 +1,46 @@
-<nav class="navbar navbar-defualt">
-  <div class="container">
-    <div class="navbar-header">
-      <a href=""></a><h1 id="headline">Mission: Possible</h1>
+<div class="navbar-header">
+  <div class="logout_button">
+    <% if current_user %>
+          Signed in as <%= current_user.name %> | <%= link_to "Logout", sessions_destroy_path %>
+    <% else %>
+          <%= link_to 'Login', '/' %> | <%= link_to 'Signup', users_new_path %>
+    <% end %>
+        <div>
+      <%= image_tag 'RAF_roundel.png', class:"round" %>
     </div>
-  </div>
-</nav>
+    </div>
+  <h1 id="headline"><%= link_to "Mission: Possible", lists_path %></h1>
+</div>
 
-<div class="container">
-<p id="notice"><%= notice %></p>
+<br>
 
-<p>
+<div class="show_text text-center todo_show">
+
+ <p id="notice"><%= notice %></p>
+
+<p class="show_box">
   <strong>Todo:</strong>
   <%= @todo_item.todo %>
 </p>
 
-<p>
+<p class="show_box">
   <strong>Description:</strong>
   <%= @todo_item.description %>
 </p>
 
-<p>
+<p class="show_box">
   <strong>Due:</strong>
   <%= @todo_item.due %>
 </p>
 
-<p>
-  <strong>Status:</strong><br>
+<p class="show_box">
+  <strong>Status:</strong>
   <%= @todo_item.status %>
 </p>
 
-<%= link_to 'Edit', edit_todo_item_path(@todo_item) %> |
-<%= link_to 'Back', list_todo_items_path(@todo_item.list) %>
+</div>
+
+<div class="text-center">
+<%= link_to '', edit_todo_item_path(@todo_item), class:"fa fa-laptop fa-2x" %> |
+<%= link_to '', list_todo_items_path(@todo_item.list), class:"fa fa-caret-square-o-left fa-2x" %>
 </div>

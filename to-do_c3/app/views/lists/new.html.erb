@@ -5,6 +5,9 @@
     <% else %>
           <%= link_to 'Login', '/' %> | <%= link_to 'Signup', users_new_path %>
     <% end %>
+    <div>
+      <%= image_tag 'RAF_roundel.png', class:"round" %>
+    </div>
     </div>
   <h1 id="headline"><%= link_to "Mission: Possible", lists_path %></h1>
 </div>
@@ -12,7 +15,7 @@
 <br>
 
 <div class="new_container text-center">
-  <h1>New list</h1>
+  <h1>New Mission</h1>
 
     <%= render 'form' %>
 
