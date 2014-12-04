@@ -17,8 +17,7 @@
         <td class="list_text"><%= todo_item.todo %></td>
         <td class="list_text"><%= todo_item.description %></td>
         <td class="list_text"><%= todo_item.due %></td>
-        <% time_ago = todo_item.updated_at %>
-        <td class="list_text"><%= time_ago_in_words(time_ago) %> ago.</td>
+        <td class="list_text"><%= time_ago_in_words(todo_item.updated_at) %> ago.</td>
         <td class="list_text"> <%= todo_item.status %></td>
         <td class="icon"><%= link_to '', edit_todo_item_path(todo_item), class: "fa fa-laptop fa-2x" %></td>
         <td class="icon"><%= link_to '', todo_item_path(todo_item), method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-bomb fa-2x" %></td>
